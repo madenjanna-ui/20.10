@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#173f35">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Семейное поклонение</title>
+  <link rel="stylesheet" href="style.css?v=20261014-2">
+</head>
+<body>
+
+  <audio id="bgMusic" src="assets/Peaceful Worship.mp3" loop preload="auto"></audio>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Музыка">
+    <span id="musicIcon">♫</span>
+  </button>
+
+  <!-- ОБЛОЖКА -->
+  <main class="cover" id="cover">
+
+    <section class="scene scene-one active" aria-hidden="true">
+      <img src="assets/new-world.png" alt="">
+    </section>
+
+    <section class="scene scene-two" aria-hidden="true">
+      <img src="assets/family.png" alt="">
+    </section>
+
+    <section class="intro" id="intro">
+      <div class="intro-glass">
+        <div class="eyebrow">УТОЧНЕНИЕ В ПОНИМАНИИ</div>
+        <h1>Семейное поклонение</h1>
+        <div class="divider"></div>
+
+        <blockquote>
+          «Как свет утренней зари, который становится всё ярче и ярче
+          до наступления полудня».
+        </blockquote>
+
+        <div class="reference">Притчи 4:18</div>
+
+        <button class="continue-btn" id="continueBtn">
+          <span class="play-icon">▶</span>
+          К содержанию
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- БУКЛЕТ -->
+  <div class="booklet" id="booklet" hidden>
+
+    <header class="booklet-header">
+      <div>
+        <div class="header-title">УТОЧНЕНИЕ В ПОНИМАНИИ</div>
+        <div class="header-subtitle">Семейное поклонение · Притчи 4:18</div>
+      </div>
+      <button class="header-home" id="headerHome" type="button" aria-label="На главную">⌂</button>
+    </header>
+
+    <div class="booklet-content">
+
+      <!-- ГЛАВНОЕ МЕНЮ -->
+      <section class="panel menu-panel active" id="menuPanel">
+        <div class="welcome-card">
+          <div class="small-label">СОДЕРЖАНИЕ</div>
+          <h2>Наше семейное поклонение</h2>
+          <p>
+            Исследуем, размышляем и делимся тем, что помогает нам
+            лучше понимать Библию.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <button class="menu-card" data-panel="songPanel">
+            <span class="menu-icon">🎵</span>
+            <span class="menu-name">Песня</span>
+            <span class="menu-hint">Песня и слова</span>
+          </button>
+
+          <button class="menu-card" data-panel="participantsPanel">
+            <span class="menu-icon">👨‍👩‍👧‍👦</span>
+            <span class="menu-name">Участники</span>
+            <span class="menu-hint">Кто сегодня с нами</span>
+          </button>
+
+          <button class="menu-card" data-panel="myTopicPanel">
+            <span class="menu-icon">📖</span>
+            <span class="menu-name">Моя тема</span>
+            <span class="menu-hint">Открыть по коду</span>
+          </button>
+
+          <button class="menu-card" data-action="home">
+            <span class="menu-icon">🏡</span>
+            <span class="menu-name">На главную</span>
+            <span class="menu-hint">Вернуться к обложке</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ПЕСНЯ -->
+      <section class="panel" id="songPanel">
+        <button class="back-btn" data-action="menu">← К содержанию</button>
+
+        <div class="section-card">
+          <div class="section-icon">🎵</div>
+          <h2>Песня 95</h2>
+
+          <div class="song-player">
+            <div class="song-art">♪</div>
+            <div class="song-info">
+              <strong>Свет становится ярче</strong>
+              <span>Притчи 4:18</span>
+            </div>
+          </div>
+
+          <audio id="songAudio" src="assets/sjjm_U_095.mp3" preload="metadata"></audio>
+
+          <div class="song-controls">
+            <button id="songPlayBtn" type="button" class="song-play">▶</button>
+            <div class="song-progress-wrap">
+              <input id="songProgress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Позиция песни">
+              <div class="song-time">
+                <span id="songCurrent">0:00</span>
+                <span id="songDuration">0:00</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="lyricsToggle" type="button" class="lyrics-toggle">
+            📜 Показать слова
+          </button>
+
+          <div class="lyrics-box" id="lyricsBox" hidden>
+            <div class="lyrics-title">📜 Свет становится ярче</div>
+            <div class="lyrics-subtitle">Притчи 4:18</div>
+
+            <div class="lyrics">
+              <div class="lyrics-part">
+                <div class="lyrics-label">1.</div>
+                <div class="lyrics-lines">
+                  <div>Пророки желали узнать о Христе,</div>
+                  <div>Единой надежде творенья.</div>
+                  <div>Святой дух открыл, что Мессия придёт,</div>
+                  <div>Покажет всем путь для спасенья.</div>
+                  <div>То время пришло, наш Господь стал Царём,</div>
+                  <div>Священная тайна ясна.</div>
+                  <div>Открыто для нас через признак времён</div>
+                  <div>То, что ангелы жаждали знать.</div>
+                </div>
+              </div>
+
+              <div class="lyrics-chorus">
+                <div class="lyrics-label">ПРИПЕВ</div>
+                <div class="lyrics-lines">
+                  <div>Становится путь наш яснее,</div>
+                  <div>Мы ходим во свете, как днём.</div>
+                  <div>Внимай откровениям Бога,</div>
+                  <div>Он нас направляет во всём.</div>
+                </div>
+              </div>
+
+              <div class="lyrics-part">
+                <div class="lyrics-label">2.</div>
+                <div class="lyrics-lines">
+                  <div>Господь нам назначил раба своего,</div>
+                  <div>Он вовремя нам помогает.</div>
+                  <div>Свет истины ярче сияет теперь,</div>
+                  <div>Сердец и умов достигает.</div>
+                  <div>Наш путь с каждым днём всё светлей, как заря,</div>
+                  <div>Уверенней стали шагать.</div>
+                  <div>Как рады постичь и открыть для себя</div>
+                  <div>Многогранную мудрость Творца.</div>
+                </div>
+              </div>
+
+              <div class="lyrics-chorus">
+                <div class="lyrics-label">ПРИПЕВ</div>
+                <div class="lyrics-lines">
+                  <div>Становится путь наш яснее,</div>
+                  <div>Мы ходим во свете, как днём.</div>
+                  <div>Внимай откровениям Бога,</div>
+                  <div>Он нас направляет во всём.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- УЧАСТНИКИ -->
+      <section class="panel" id="participantsPanel">
+        <button class="back-btn" data-action="menu">← К содержанию</button>
+
+        <div class="section-card">
+          <div class="section-icon">👨‍👩‍👧‍👦</div>
+          <h2>Участники</h2>
+
+          <div class="participants-title">Кто сегодня с нами</div>
+
+          <div class="participants-list">
+            <div class="person">Жанна</div>
+            <div class="person">Иван</div>
+            <div class="person">Светлана</div>
+            <div class="person">Ирина</div>
+            <div class="person">Виктория</div>
+            <div class="person">...</div>
+            <div class="person">Денис</div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-title">💎 Задание</div>
+            <p>
+              Подготовь рассказ по результатам своего исследования, минут на 10 не более.
+            </p>
+
+            <div class="direction-title">Вопросы, которые помогут задать направление:</div>
+
+            <ul class="question-list">
+              <li>Что я узнал?</li>
+              <li>Что меня особенно впечатлило?</li>
+              <li>Что это показывает об Иегове?</li>
+              <li>Как я могу применить это в жизни?</li>
+            </ul>
+
+            <p class="note">
+              Вопросы приблизительные. Они просто помогут задать правильный
+              вектор для исследования и рассказа.
+            </p>
+
+            <p class="choice-note">
+              Можно исследовать <strong>все темы</strong> или выбрать
+              <strong>избирательно</strong> — одну или несколько тем,
+              которые особенно заинтересовали или впечатлили.
+            </p>
+          </div>
+
+          <div class="secret-note">
+            🔐 Своё индивидуальное задание можно узнать во вкладке
+            <strong>«Моя тема»</strong>.
+          </div>
+        </div>
+      </section>
+
+      <!-- МОЯ ТЕМА -->
+      <section class="panel" id="myTopicPanel">
+        <button class="back-btn" data-action="menu">← К содержанию</button>
+
+        <div class="section-card code-card">
+          <div class="section-icon">📖</div>
+          <h2>Моя тема</h2>
+          <p class="muted">
+            Введи свой двухзначный код, чтобы открыть индивидуальное задание.
+          </p>
+
+          <div class="code-entry">
+            <input
+              id="codeInput"
+              type="text"
+              inputmode="numeric"
+              maxlength="3"
+              pattern="[0-9]{2,3}"
+              autocomplete="off"
+              placeholder="00"
+              aria-label="Двухзначный код"
+            >
+            <button id="openCodeBtn" type="button">Открыть</button>
+          </div>
+
+          <div class="code-message" id="codeMessage"></div>
+
+          <div class="topic-result" id="topicResult" hidden></div>
+        </div>
+      </section>
+
+      <!-- ВЕДУЩИЙ -->
+      <section class="panel" id="leaderPanel">
+        <button class="back-btn" data-action="menu">← К содержанию</button>
+
+        <div class="section-card">
+          <div class="section-icon">👑</div>
+          <h2>Режим ведущего</h2>
+          <p class="muted">
+            Все задания по порядку.
+          </p>
+
+          <div class="leader-progress" id="leaderProgress"></div>
+          <div id="leaderContent"></div>
+
+          <div class="leader-controls">
+            <button id="leaderPrev" type="button">← Назад</button>
+            <button id="leaderNext" type="button">Далее →</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="app.js?v=20261014-2"></script>
+</body>
+</html>
